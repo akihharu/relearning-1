@@ -1,0 +1,10 @@
+class CreateCandidateDates < ActiveRecord::Migration[7.1]
+  def change
+    create_table :candidate_dates do |t|
+      t.references :event, null: false, foreign_key: true
+      t.date :date
+
+      t.timestamps
+    end
+  end
+end
