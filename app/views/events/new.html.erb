@@ -1,0 +1,33 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      
+      <div class="border-bottom pb-3 mb-4">
+        <span class="badge bg-primary mb-2">イベント作成画面</span>
+        <h2 class="fw-bold text-dark">イベント名を決めてください</h2>
+      </div>
+
+      <div class="card shadow-sm mb-5">
+        <div class="card-header bg-light">
+          <h5 class="card-title mb-0 fs-6 fw-bold text-muted">イベントの新規登録</h5>
+        </div>
+        <div class="card-body">
+          <div class="text-secondary lh-lg">
+            <%= form_with model: @event do |f| %>
+              <div class="mb-3">
+                <%= f.label :title, class: "form-label" %>
+                <%= f.text_field :title, class: "form-control" %>
+              </div>
+              <div class="mb-3">
+                <%= f.label :desc, class: "form-label" %>
+                <%= f.text_area :desc, class: "form-control", rows: 3 %>
+              </div>
+              <%= f.submit 'イベントを作成する', class: "btn btn-primary" %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

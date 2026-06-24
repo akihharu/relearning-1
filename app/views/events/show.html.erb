@@ -1,0 +1,21 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      
+      <div class="border-bottom pb-3 mb-4">
+        <span class="badge bg-primary mb-2">イベント管理画面</span>
+        <h2 class="fw-bold text-dark"><%= @event.title %></h2>
+      </div>
+
+      <div class="card shadow-sm mb-5">
+        <div class="card-header bg-light">
+          <h5 class="card-title mb-0 fs-6 fw-bold text-muted">イベントの概要・メモ</h5>
+        </div>
+        <div class="card-body">
+          <p class="card-text text-secondary lh-lg" style="white-space: pre-wrap;"><%= @event.desc %></p>
+        </div>
+      </div>
+
+      </div>
+  </div>
+</div>
