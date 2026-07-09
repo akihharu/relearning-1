@@ -9,6 +9,6 @@ Rails.application.routes.draw do
   # root "posts#index"
 
   resources :events, only: [:new, :create, :show] do
-    resources :candidate_dates, only: [:create :destroy]
+    resources :candidate_dates, only: [:create, :destroy]
   end
 end
