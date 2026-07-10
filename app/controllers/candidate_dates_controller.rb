@@ -1,7 +1,7 @@
 class CandidateDatesController < ApplicationController
   def create
     @event = Event.find(params[:event_id])
-    @candidate_date = @event.candidate_dates.build(candidate_date_parmas)
+    @candidate_date = @event.candidate_dates.build(candidate_date_params)
     if @candidate_date.save
       redirect_to @event
     end
