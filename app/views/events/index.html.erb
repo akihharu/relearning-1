@@ -1,0 +1,38 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      
+      <div class="border-bottom pb-3 mb-4">
+        <span class="badge bg-primary mb-2">イベント一覧</span>
+      </div>
+      <div class="card shadow-sm mb-5">
+        <div class="card-header bg-light">
+        <%= link_to '新規イベント', new_event_path, class: "btn btn-sm btn-outline-primary me-2" %>
+        </div>
+      </div>
+      <div class="card shadow-sm mb-5">
+        <div class="card-header bg-light">
+          <h5 class="card-title mb-0 fs-6 fw-bold text-muted">イベントの新規登録</h5>
+        </div>
+        <div class="card-body">
+          <div class="text-secondary lh-lg">
+            <% @events.each do |event| %>
+              <div class="d-flex justify-content-between align-items-center border-bottom py-3">
+                <span class="fw-bold text-dark fs-5"><%= event.title %></span>
+                <div>
+                      <div class="card shadow-sm mb-5">
+        <div class="card-header bg-light">
+                <%= link_to '詳細', event_path(event), class: "btn btn-sm btn-outline-primary me-2" %>
+                <%= link_to '削除', event_path(event), 
+                    data: { turbo_method: :delete, turbo_confirm: "本当にこのイベントを削除しますか？" }, 
+                    class: "btn btn-sm btn-danger" %>
+               </div>   
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
